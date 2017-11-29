@@ -359,24 +359,8 @@ bool readfile(string str,
 {
 	ifstream fin;
 	string line;
-	if (str == "A.txt")
-	{
-		fin.open("A.txt");
-		if (!fin.is_open())
-		{
-			return false;
-		}
-		getline(fin, line);
-		if (!(input(fin, elements, rows, columns))) 
-		{
-			return false;
-		}	
-		fin.close();
-		return true;
-	}
-	if (str == "B.txt")
-	{
-		fin.open("B.txt");
+	
+		fin.open(str);
 		if (!fin.is_open())
 		{
 			return false;
@@ -388,37 +372,8 @@ bool readfile(string str,
 		}
 		fin.close();
 		return true;
-	}
-	if (str == "C.txt")
-	{
-		fin.open("C.txt");
-		if (!fin.is_open())
-		{
-			return false;
-		}
-		getline(fin, line);
-		if (!(input(fin, elements, rows, columns)))
-		{
-			return false;
-		}
-		fin.close();
-		return true;
-	}
-	if (str == "D.txt")
-	{
-		fin.open("D.txt");
-		if (!fin.is_open())
-		{
-			return false;
-		}
-		getline(fin, line);
-		if (!(input(fin, elements, rows, columns)))
-		{
-			return false;
-		}
-		fin.close();
-		return true;
-	}
+	
+	
 }
 
 int main() {
